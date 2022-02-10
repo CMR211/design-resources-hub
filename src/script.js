@@ -1,45 +1,26 @@
+const links = fetch('./links.json').then((response) => {
+    return response.json()
+})
 ;(function createLinksTableElemenets() {
-    const tableContainer = document.getElementById('ui-ux')
+    const typesArray = Array.from(new Set(links.map((i) => i.type)))
+    typesArray.forEach((type) => {
+        const container = document.getElementById('container')
+        const subcontainer = document.createElement('div')
+        subcontainer.classList.add('grid', 'mt-5')
+        subcontainer.id = type
+        subcontainer.innerHTML = `<h2 class="grid-title">${type}</h2>`
+        container.appendChild(subcontainer)
+    })
 
-    const linksItems = [
-        {
-            id: 1,
-            title: 'Dribble',
-            desc: 'Discover professional layouts and beautiful designs of full web-pages and components.',
-            url: 'https://dribbble.com/',
-            img: './assets/screenshots/dribble.png',
-        },
-        {
-            id: 2,
-            title: 'UI Design Daily',
-            desc: 'Many predesigned elements to inspire from.',
-            url: 'https://www.uidesigndaily.com/',
-            img: './assets/screenshots/ui-design-daily.png',
-        },
-        {
-            id: 3,
-            title: 'Trianglify',
-            desc: 'Generate beautiful svg backgrounds made of triangles and gradients.',
-            url: 'https://trianglify.io/',
-            img: './assets/screenshots/trianglify.png',
-        },
-        {
-            id: 4,
-            title: 'Remix-icon',
-            desc: 'Remix Icon is a set of open source neutral style system symbols elaborately crafted for designers and developers.',
-            url: 'https://remixicon.com',
-            img: './assets/screenshots/remix-icon.png'
-        }
-    ]
-
-    linksItems.forEach((i) => {
+    links.forEach((i) => {
         const card = document.createElement('div')
+        const container = document.getElementById(i.type)
         card.classList.add('site-card')
         card.innerHTML = `<a href=${i.url} class="link-reset">
-                    <img class="card__img img-fluid" src=${i.img} alt="image of a ${i.title} website" />
+                    <img class="card__img img-fluid" src='./assets/screenshots/${i.img}' alt="image of a ${i.title} website" />
                     <h3 class="card__title my-4 mx-4">${i.title}</h1>
-                    <p class="card__desc m-4 small">${i.desc}</p>
+                    <p class="card__desc m-4 small">#${i.id} ${i.desc}</p>
                 </a>`
-        tableContainer.appendChild(card)
+        container.appendChild(card)
     })
 })()
