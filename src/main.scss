@@ -12,7 +12,7 @@ body {
     }
 }
 
-.site-card {
+.card {
     background: white;
     width: 100%;
     border-radius: 0.5rem;
@@ -22,6 +22,10 @@ body {
     &:hover {
         transform: scale(1.05);
         color: inherit;
+    }
+    &__img {
+        width: 100%;
+        aspect-ratio: calc(720/640);
     }
 }
 
