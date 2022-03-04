@@ -1,6 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: rgb(100, 100, 100);
-    // font-family: "Lato", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -10,6 +16,56 @@ body {
     &:hover {
         color: inherit;
     }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+$content-width: 90rem;
+$header-height: 90px;
+$content-margin: 3rem;
+
+.header {
+    position: fixed;
+    top: 0;
+    padding: 0 $content-margin;
+    height: $header-height;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px 10px rgba(black, 0.05);
+    &__container {
+        max-width: $content-width;
+        margin: auto;
+        // margin-top: 1rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__subcontainer-title {
+        display: flex;
+        align-items: center;
+    }
+    &__subcontainer-nav nav {
+        display: flex;
+        gap: 2rem;
+        padding-left: 3rem;
+        padding-top: 1rem;
+        a {
+            font-size: 1.2rem;
+        }
+    }
+    .title {
+        width: 100%;
+    }
+    i {
+        margin-right: 1rem;
+    }
+}
+
+.container {
+    margin: 3rem;
+    margin-top: $header-height;
 }
 
 .card {
@@ -25,17 +81,27 @@ body {
     }
     &__img {
         width: 100%;
-        aspect-ratio: calc(720/640);
+        aspect-ratio: calc(720 / 640);
+    }
+    &__title {
+        margin: 2rem 1rem;
+    }
+    &__description {
+        margin: 1rem;
+        line-height: 2;
     }
 }
 
 .grid {
+    max-width: $content-width;
+    margin: auto;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    .grid-title {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .subtitle {
         grid-column: 1 / -1;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid rgba(black, 0.05);
+        margin-top: 5rem;
     }
 }
