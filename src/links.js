@@ -1,7 +1,7 @@
 data = [
     {
         id: 1,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "Dribble",
         desc: "Discover professional layouts and beautiful designs of full web-pages and components.",
         url: "https://dribbble.com/",
@@ -9,7 +9,7 @@ data = [
     },
     {
         id: 2,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "UI Design Daily",
         desc: "Many predesigned elements to inspire from.",
         url: "https://www.uidesigndaily.com/",
@@ -17,7 +17,7 @@ data = [
     },
     {
         id: 3,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "Trianglify",
         desc: "Generate beautiful svg backgrounds made of triangles and gradients.",
         url: "https://trianglify.io/",
@@ -25,7 +25,7 @@ data = [
     },
     {
         id: 4,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "Remix-icon",
         desc: "Remix Icon is a set of open source neutral style system symbols elaborately crafted for designers and developers.",
         url: "https://remixicon.com",
@@ -65,7 +65,7 @@ data = [
     },
     {
         id: 9,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "Squarespace",
         desc: "Squarespace offers many different website templates grouped by categories.",
         url: "https://www.squarespace.com/templates",
@@ -129,7 +129,7 @@ data = [
     },
     {
         id: 17,
-        type: "UI/UX design",
+        type: "UI/UX_design",
         title: "Design resources repository",
         desc: "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more",
         url: "https://github.com/bradtraversy/design-resources-for-developers",
@@ -151,4 +151,12 @@ data = [
         url: "https://github.com/microsoft/Web-Dev-For-Beginners",
         img: "ms-webdev-for-beginners.png",
     },
+    {
+        id: 20,
+        type: "UI/UX_design",
+        title: "Coolors.co",
+        desc: "Beautiful color palettes to choose from.",
+        url: "https://coolors.co/",
+        img: "coolors.co.png"
+    }
 ]

@@ -6,7 +6,7 @@
 
 body {
     color: rgb(100, 100, 100);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
 
@@ -25,6 +25,7 @@ body {
 $content-width: 90rem;
 $header-height: 90px;
 $content-margin: 3rem;
+$simple-shadow: 0 0 10px 10px rgba(black, 0.05);
 
 .header {
     position: fixed;
@@ -33,12 +34,11 @@ $content-margin: 3rem;
     height: $header-height;
     width: 100%;
     background-color: white;
-    box-shadow: 0 0 10px 10px rgba(black, 0.05);
+    box-shadow: $simple-shadow;
     z-index: 10;
     &__container {
         max-width: $content-width;
         margin: auto;
-        // margin-top: 1rem;
         height: 100%;
         display: flex;
         align-items: center;
@@ -64,9 +64,41 @@ $content-margin: 3rem;
     }
 }
 
+.navbar {
+    margin: auto;
+    margin: $content-margin;
+    margin-top: calc($header-height + 3rem);
+}
+
+#container-navbar {
+    max-width: $content-width;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    a {
+        font-weight: 600;
+        flex-grow: 1;
+        border-radius: 0.25rem;
+        box-shadow: 4px 4px 10px 1px rgba(black, 0.05);
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        transition: 300ms;
+    }
+    a:hover {
+        background-color: rgba(black, 0.03);
+    }
+}
+
 .container {
     margin: 3rem;
-    margin-top: $header-height;
+    margin-top: 0rem;
+}
+.container:nth-child(1) {
+    margin-top: 0rem;
 }
 
 .card {
@@ -89,7 +121,8 @@ $content-margin: 3rem;
     }
     &__description {
         margin: 1rem;
-        line-height: 2;
+        line-height: 1.7;
+        font-size: 0.94em;
     }
 }
 
@@ -103,6 +136,7 @@ $content-margin: 3rem;
         grid-column: 1 / -1;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid rgba(black, 0.05);
-        margin-top: 5rem;
+        margin-top: 3rem;
+        font-size: 1.5em;
     }
 }
