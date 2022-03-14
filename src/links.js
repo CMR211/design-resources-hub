@@ -157,6 +157,22 @@ data = [
         title: "Coolors.co",
         desc: "Beautiful color palettes to choose from.",
         url: "https://coolors.co/",
-        img: "coolors.co.png"
+        img: "coolors.co.png",
+    },
+    {
+        id: 21,
+        type: "JavaScript",
+        title: "Splide",
+        desc: "Lightweight javascript library for slider/carousel, with thumbnails and more",
+        url: "https://splidejs.com/",
+        img: "splide.png",
+    },
+    {
+        id: 22,
+        type: "JavaScript",
+        title: "fullPage",
+        desc: "Fullscreen scrolling websites",
+        url: "https://alvarotrigo.com/fullPage/#",
+        img: "fullpage.png",
     }
 ]
